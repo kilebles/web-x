@@ -1,0 +1,1578 @@
+/* Общие стили */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+@media only screen and (max-width: 1435px) {
+    body {
+        font-size: 16px;
+        line-height: 1.4;
+        padding: 0 20px;
+        /* Отступы по бокам */
+        justify-content: center;
+        /* Центрирование контента */
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Основной контейнер страницы */
+.page-container {
+    max-width: 1400px;
+    /* Ограничиваем ширину всего контента */
+    margin: 0 auto;
+    /* Центрируем контейнер на странице */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили для хедера */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1400px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    /* Логотип и меню по краям */
+    align-items: center;
+    padding: 2px 40px;
+    background: rgba(0, 0, 0, 0.733);
+    /* Полупрозрачный чёрный фон */
+    backdrop-filter: blur(7px);
+    /* Лёгкое размытие */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Лёгкая тень */
+    z-index: 500;
+}
+
+@media (max-width: 1435px) {
+    .logo-container {
+        padding-left: 10px;
+    }
+
+    .connect-button {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 1279px) {
+    .logo-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .logo-container img {
+        width: 55px;
+        /* Уменьшаем размер логотипа */
+    }
+
+    .brand-name {
+        font-size: 20px;
+        /* Меньший шрифт для названия бренда */
+    }
+
+    .connect-button {
+        display: inline-block;
+        padding: 8px 15px;
+        font-size: 14px;
+        margin-left: auto;
+        /* Это сместит кнопку вправо */
+    }
+}
+
+@media (max-width: 760px) {
+    .connect-button {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 14px;
+        margin-left: auto;
+        /* Это сместит кнопку вправо */
+    }
+}
+
+h1,
+h2,
+h3 {
+    --framer-font-family: "GT Walsheim Medium", "GT Walsheim Medium Placeholder", sans-serif;
+    --framer-font-family-bold: "GT Walsheim Bold", "GT Walsheim Bold Placeholder", sans-serif;
+    --framer-font-family-bold-italic: "GT Walsheim Bold Oblique", "GT Walsheim Bold Oblique Placeholder", sans-serif;
+    --framer-font-family-italic: "GT Walsheim Medium Oblique", "GT Walsheim Medium Oblique Placeholder", sans-serif;
+    font-family: var(--framer-font-family);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 34px;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+    ;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cfcfcf;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1279px) {
+    p {
+        font-size: 16px;
+        /* Уменьшаем размер шрифта для мобильных */
+        line-height: 1.5;
+        /* Немного уменьшаем межстрочный интервал */
+        margin-bottom: 15px;
+        /* Уменьшаем отступы снизу */
+    }
+}
+
+a {
+    --framer-font-family: 'Inter', sans-serif;
+    /* Шрифт Inter, как на всём сайте */
+    --framer-font-weight: 600;
+    /* Средняя жирность шрифта */
+    --framer-letter-spacing: -0.01em;
+    /* Лёгкое сужение расстояния между буквами */
+    --framer-line-height: 1.6em;
+    /* Более удобочитаемая высота строки */
+    --framer-text-color: rgb(150, 150, 150);
+    /* Серый цвет текста */
+
+    font-family: var(--framer-font-family);
+    font-weight: var(--framer-font-weight);
+    letter-spacing: var(--framer-letter-spacing);
+    line-height: var(--framer-line-height);
+    text-align: left;
+    /* Текст выравнивается по левому краю */
+    color: var(--framer-text-color);
+    /* Серый цвет текста */
+    text-decoration: none;
+    /* Убираем подчеркивание */
+    transition: color 0.3s ease;
+    /* Плавное изменение цвета при наведении */
+    position: relative;
+}
+
+@media (max-width: 1279px) {
+    a {
+        font-size: 16px;
+        /* Уменьшаем размер шрифта для мобильных */
+        line-height: 1.5em;
+        /* Немного уменьшаем межстрочный интервал */
+        text-align: left;
+        /* Оставляем выравнивание по левому краю */
+    }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    z-index: 3000;
+}
+
+.logo {
+    width: 60px;
+    margin-right: 0px;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+@media (max-width: 1279px) {
+    .logo-container {
+        justify-content: center;
+        /* Центрирование логотипа и названия */
+    }
+
+    .logo {
+        width: 55px;
+        /* Уменьшение размера логотипа на мобильных устройствах */
+        margin-right: 0px;
+        /* Немного уменьшаем отступ между логотипом и названием */
+    }
+
+    .brand-name {
+        font-size: 18px;
+        /* Уменьшаем размер шрифта для названия */
+        font-weight: 600;
+        /* Чуть более тонкий шрифт для мобильных */
+    }
+}
+
+nav {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    /* Центрируем пункты навигации */
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Стили для бургер-кнопки */
+.burger-menu {
+    position: absolute;
+    /* Зафиксируйте кнопку в правом верхнем углу */
+    right: 52px;
+    /* Положение от правого края */
+    top: 20px;
+    width: 35px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 5000;
+    background: transparent;
+    /* Убираем фон */
+    border: none;
+    /* Убираем границу */
+    display: block;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 760px) {
+
+    .burger-menu::before,
+    .burger-menu::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        margin: 8px 0;
+        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.4s ease;
+    }
+
+    .burger-menu.active::before {
+        transform: translateY(5px) rotate(45deg);
+    }
+
+    .burger-menu.active::after {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        background: rgb(0, 0, 0);
+        width: 100%;
+        height: 100vh;
+        padding-left: 55px;
+        top: 0;
+        padding-top: 50px;
+        z-index: 2000;
+        backdrop-filter: blur(7px) !important;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    nav ul.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    nav ul li {
+        margin-top: 25px !important;
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: opacity 0.15s ease, transform 0.15s ease;
+    }
+
+    nav ul.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    nav ul.active li:nth-child(1) {
+        transition-delay: 0.3s;
+    }
+
+    nav ul.active li:nth-child(2) {
+        transition-delay: 0.45s;
+    }
+
+    nav ul.active li:nth-child(3) {
+        transition-delay: 0.60s;
+    }
+
+    nav ul.active li:nth-child(4) {
+        transition-delay: 0.75s;
+    }
+
+    nav ul li a {
+        color: #b4afaf !important;
+    }
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    /* Прозрачный текст для применения градиента */
+    background: linear-gradient(90deg, #807d7d, #ffffff);
+    /* Градиент из серого в фиолетовый */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* Поддержка для Webkit-браузеров */
+    background-size: 200%;
+    /* Увеличиваем размер фона для эффекта движения */
+    transition: background-position 0.5s ease, color 0.5s ease;
+    /* Плавная анимация */
+    background-position: 0% 0;
+    /* Начальное положение градиента */
+    font-size: 16px;
+
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+nav ul li a:hover {
+    background-position: 100% 0;
+    /* Градиент плавно смещается вправо */
+    color: transparent;
+    /* Оставляем текст прозрачным для градиента */
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    /* Линия растягивается слева направо */
+}
+
+/* Кнопка подключения */
+.connect-button {
+    padding: 5px 10px;
+    border-radius: 12px;
+    border: 2px solid rgb(179, 81, 214, 0.7);
+    /* Линия с фиолетовой рамкой */
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 16px;
+    white-space: nowrap;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+    /* Изначальный градиент */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    margin-left: auto;
+    /* Добавляем авто-отступ слева для выравнивания */
+    z-index: 6000;
+}
+
+@media (max-width: 1279px) {
+    .connect-button {
+        font-size: 14px;
+        /* Уменьшаем размер шрифта для небольших экранов */
+        white-space: normal;
+        /* Разрешаем перенос текста на новую строку */
+        width: auto;
+        /* Делаем ширину кнопки адаптивной */
+        margin-right: 20px;
+        /* Добавляем отступ справа для кнопки */
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 760px) {
+    .connect-button {
+        font-size: 14px;
+        /* Уменьшаем размер шрифта для небольших экранов */
+        white-space: normal;
+        /* Разрешаем перенос текста на новую строку */
+        width: auto;
+        /* Делаем ширину кнопки адаптивной */
+        margin-right: 60px;
+        /* Добавляем отступ справа для кнопки */
+        border-radius: 9px;
+    }
+}
+
+@media (max-width: 500px) {
+    .connect-button {
+        font-size: 14px;
+        /* Уменьшаем размер шрифта для небольших экранов */
+        white-space: normal;
+        /* Разрешаем перенос текста на новую строку */
+        width: auto;
+        /* Делаем ширину кнопки адаптивной */
+        padding: 4px 10px;
+    }
+}
+
+.connect-button:hover {
+    box-shadow: 0 8px 20px rgba(12, 11, 12, 0.7);
+    /* Глубокая тень при наведении */
+    border: 2px solid #fff;
+}
+
+#home {
+    margin: -583px auto 0;
+}
+
+@media (max-width: 1279px) {
+    #home {
+        margin-top: 30px;
+    }
+}
+
+/* Фиксированный баннер */
+.fixed-banner {
+    position: -webkit-sticky;
+    /* Для Safari */
+    position: sticky;
+    top: 130px;
+    /* Начальная позиция */
+    width: 400px;
+    margin-right: 50px;
+    z-index: 100;
+    word-wrap: break-word;
+    /* Позволяет перенос текста */
+}
+
+.fixed-banner model-viewer {
+    width: 100%;
+    max-width: 390px;
+    height: 390px;
+    margin: 0;
+    /* Убираем отступы справа для выравнивания по левому краю */
+    display: block;
+    /* Убедитесь, что элемент блочный */
+    transform: translateX(-10px);
+    /* Сдвиг модели вверх, если нужно */
+    margin: 10px 0px 17px 0px;
+}
+
+@media only screen and (max-width: 1279px) {
+    .fixed-banner {
+        position: relative;
+        /* Меняем позицию на relative */
+        width: 99%;
+        z-index: 1;
+        /* Баннер остаётся над контентом */
+        top: 30px;
+        text-align: center;
+        padding-top: 100px;
+        margin: 0 auto;
+        max-width: 1279px;
+    }
+
+    .fixed-banner h2 {
+        margin: 0px 20px 20px 20px;
+    }
+
+    .fixed-banner model-viewer {
+        max-width: 160px;
+        height: 160px;
+        transform: translateX(0px);
+        /* Сдвиг модели вверх, если нужно */
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 630px) {
+    .fixed-banner {
+        position: relative;
+        /* Меняем позицию на relative */
+        width: 100%;
+        z-index: 1;
+        /* Баннер остаётся над контентом */
+        top: 30px;
+        text-align: center;
+        padding-top: 70px;
+        margin: 0 auto;
+    }
+
+    .fixed-banner h2 {
+        font-size: 2.5em;
+        line-height: 1.3em;
+        margin: 0 auto;
+        font-weight: bold;
+        font-size: 34px !important;
+        text-align: left;
+    }
+
+    .fixed-banner model-viewer {
+        display: none;
+    }
+}
+
+.fixed-banner h2 {
+    line-height: 1.4em;
+    font-weight: bold;
+    margin: 0 auto;
+    font-size: 34px;
+}
+
+.fixed-banner .cta-button {
+    display: inline-block;
+    color: white;
+    /* Цвет текста */
+    padding: 10px 35px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    border: 2px solid rgb(179, 81, 214, 0.7);
+    /* Линия с фиолетовой рамкой */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+    /* Изначальный градиент */
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Добавление эффекта наведения */
+.fixed-banner .cta-button:hover {
+    box-shadow: 0 8px 20px rgba(12, 11, 12, 0.7);
+    /* Глубокая тень при наведении */
+    border: 2px solid #fff;
+}
+
+/* Основной контент */
+.content {
+    padding-top: 150px;
+    max-width: 807px;
+    margin-left: auto;
+    /* Сдвигаем контент в правую сторону */
+    text-align: left;
+    /* Текст внутри остаётся выровненным по левому краю */
+}
+
+@media only screen and (max-width: 1279px) {
+    .content {
+        padding-top: 50px;
+        margin: 0 auto;
+        max-width: 1279px;
+    }
+
+    .fixed-banner .cta-button {
+        display: none;
+    }
+}
+
+/* Секции */
+section:not(:first-of-type) {
+    margin-bottom: 70px;
+}
+
+@media only screen and (max-width: 500px) {
+    section:not(:first-of-type) {
+        margin-top: 20px;
+        margin-bottom: 50px;
+        ;
+    }
+}
+
+.section-divider {
+    width: 100%;
+    height: 1px;
+    /* Высота линии */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    /* Лёгкий градиент */
+    margin: 40px 0;
+    /* Отступы сверху и снизу */
+    opacity: 0.6;
+    /* Прозрачность, чтобы линия не бросалась в глаза */
+}
+
+#home img {
+    display: block;
+    max-width: 100%;
+    /* Изображение адаптируется под ширину контейнера */
+    height: auto;
+    /* Сохраняет пропорции изображения */
+    border-radius: 20px;
+    /* Закругленные углы */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    /* Мягкая внешняя тень */
+}
+
+@media (max-width: 1279px) {
+    #home img {
+        border-radius: 15px;
+        /* Менее выраженные закругления на телефонах */
+    }
+}
+
+@media (max-width: 500px) {
+    #home img {
+        border-radius: 10px;
+        /* Менее выраженные закругления на телефонах */
+    }
+}
+
+#home h3 {
+    font-size: 24px;
+    line-height: 1.6;
+    color: #fff;
+    padding: 0px 50px 0px 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+
+}
+
+@media (max-width: 1435px) {
+    #home h3 {
+        font-size: 24px;
+        margin-top: 20px;
+        text-align: left;
+        padding: 0px 30px 0px 30px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 500px) {
+    #home h3 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0px;
+        font-weight: 400;
+    }
+}
+
+#home ul {
+    list-style: none;
+    /* Убираем стандартные маркеры */
+    padding: 0px 50px 0px 70px;
+    color: #cfcfcf;
+    font-size: 18px;
+}
+
+@media (max-width: 500px) {
+    #home ul {
+        padding: 0px 20px 0px 20px;
+        font-size: 18px;
+    }
+}
+
+#home li {
+    position: relative;
+    font-family: "Inter", sans-serif;
+    line-height: 1.7em;
+
+}
+
+#home li::before {
+    content: "●";
+    /* Символ маркера */
+    color: #5a1b70;
+    /* Фиолетовый цвет */
+    font-size: 20px;
+    /* Размер маркера */
+    position: absolute;
+    left: -20px;
+    /* Отступ для маркера */
+    top: 0;
+}
+
+#home p {
+    padding: 0px 50px 0px 50px;
+    color: #cfcfcf;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 50px;
+    font-family: "Inter", sans-serif;
+    ;
+}
+
+@media (max-width: 1435px) {
+    #home p {
+        padding: 0px 30px 0px 30px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 500px) {
+    #home p {
+        padding: 0px 0px 0px 0px;
+        text-align: left;
+        font-size: 16px;
+    }
+}
+
+/* Секция 2*/
+#benefits {
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.moving-gradient {
+    position: absolute;
+    top: 5%;
+    /* Сдвигаем вниз */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 50% 30%, rgba(0, 255, 200, 0.3), transparent 30%),
+        /* Зеленый выше */
+        radial-gradient(circle at 55% 55%, rgba(127, 0, 255, 0.3), transparent 35%),
+        /* Фиолетовый ниже */
+        radial-gradient(circle at 45% 60%, rgba(255, 100, 50, 0.2), transparent 30%);
+    /* Оранжевый как дополнительный */
+    animation: moveGradient 15s ease-in-out infinite;
+    opacity: 0.7;
+    pointer-events: none;
+    filter: blur(25px);
+    /* Размытие для мягкого эффекта */
+    z-index: 1;
+}
+
+@keyframes moveGradient {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(5px, 120px);
+        /* Увеличиваем вертикальное смещение для большего движения вниз */
+    }
+}
+
+#benefits img {
+    display: block;
+    max-width: calc(100% - 100px);
+    /* 100% ширины контейнера минус отступы по 50px с каждой стороны */
+    height: auto;
+    border-radius: 20px;
+    /* Закругленные углы */
+    border: 1px solid rgba(21, 121, 12, 0.3);
+    /* Супертонкая белая рамка с прозрачностью */
+    margin: 20px 50px;
+    /* Центрирование изображения */
+}
+
+#benefits h2 {
+    margin: 0px 50px 0px 50px;
+    text-align: center;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* Равная ширина всех колонок */
+    gap: 20px;
+    padding: 0px 50px 0px 50px;
+}
+
+.benefit-item {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(25px) brightness(0.4);
+    -webkit-backdrop-filter: blur(25px) brightness(0.4);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    z-index: 2;
+}
+
+.benefit-item img {
+    max-width: 80px;
+    padding: 10px;
+    margin: 5px auto !important;
+    background: -webkit-linear-gradient(135deg, rgba(48, 43, 53, 0.2), rgba(225, 0, 255, 0.164));
+    /* Лёгкий градиент от фиолетового к розовому */
+    background: linear-gradient(135deg, rgba(48, 43, 53, 0.2), rgba(225, 0, 255, 0.164));
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Тонкая полупрозрачная рамка */
+    -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Плавные переходы с вебкитом */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -webkit-filter: brightness(0) invert(1);
+    /* Делает SVG белым */
+    filter: brightness(0) invert(1);
+}
+
+.benefit-item h3 {
+    color: #ffffff;
+    margin: 20px auto;
+    font-weight: 400;
+    font-size: 24px;
+    font-family: "Inter", sans-serif;
+    line-height: 1.05em;
+}
+
+.benefit-item p {
+    font-size: 18px;
+    color: #cfcfcf;
+    margin: 0 auto;
+    line-height: 1.3;
+}
+
+@media (max-width: 1435px) {
+    .benefit-item:last-child {
+        display: none;
+    }
+
+    #benefits img {
+        border-radius: 15px;
+        /* Менее выраженные закругления на телефонах */
+        max-width: calc(100% - 60px);
+        /* 100% ширины контейнера минус отступы по 50px с каждой стороны */
+    }
+
+    .benefit-item img {
+        max-width: 60px !important;
+        padding: 10px;
+        margin-bottom: 15px;
+        background: linear-gradient(135deg, rgba(48, 43, 53, 0.2), rgba(225, 0, 255, 0.164));
+        /* Лёгкий градиент от фиолетового к розовому */
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        /* Тонкая полупрозрачная рамка */
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Две колонки на средних экранах */
+        padding: 0px 30px 0px 30px;
+    }
+
+    #benefits h2 {
+        margin: 0px 30px 0px 30px;
+    }
+
+    .moving-gradient {
+        filter: blur(15px);
+        /* Уменьшаем размытие для мобильных */
+        opacity: 0.5;
+        /* Снижаем прозрачность для меньшего экрана */
+        height: 50%;
+        /* Уменьшаем высоту градиента */
+    }
+
+    @keyframes moveGradient {
+
+        0%,
+        100% {
+            transform: translate(0, 0);
+        }
+
+        50% {
+            transform: translate(5px, 60px);
+            /* Уменьшаем смещение для меньшего экрана */
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+    #benefits img {
+        border-radius: 15px;
+        /* Менее выраженные закругления на телефонах */
+        width: 1279px;
+        margin: 20px 0px 20px 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    #benefits img {
+        border-radius: 10px;
+        /* Менее выраженные закругления на телефонах */
+        max-width: 100%;
+    }
+
+    .benefit-item img {
+        max-width: 50px !important;
+        background: linear-gradient(135deg, rgba(48, 43, 53, 0.2), rgba(225, 0, 255, 0.164));
+        /* Лёгкий градиент от фиолетового к розовому */
+        margin: 10px auto !important;
+    }
+
+    #benefits h2 {
+        margin: 0px;
+    }
+
+    .benefit-item h3 {
+        font-size: 18px;
+        /* Уменьшаем шрифт для средних экранов */
+    }
+
+    .benefit-item p {
+        font-size: 16px;
+        /* Уменьшаем текст */
+        line-height: 1.3;
+        /* Плотнее располагаем строки */
+        margin-bottom: 10px;
+        /* Уменьшаем отступы снизу */
+
+    }
+
+    .benefit-item {
+        padding: 10px;
+        border-radius: 10px !important;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Две колонки на средних экранах */
+        padding: 0px;
+    }
+
+    @media (max-width: 500px) {
+        .moving-gradient {
+            filter: blur(6px);
+            /* Уменьшаем размытие для мобильных */
+            opacity: 0.5;
+            /* Снижаем прозрачность для меньшего экрана */
+            height: 40%;
+            /* Уменьшаем высоту градиента */
+        }
+
+        @keyframes moveGradient {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(3px, 30px);
+                /* Уменьшаем смещение для меньшего экрана */
+            }
+        }
+    }
+}
+
+/* Секция 3*/
+#products {
+    text-align: center;
+}
+
+#products h2 {
+    margin: 0px !important;
+    text-align: center;
+}
+
+#products img {
+    display: block;
+    max-width: calc(100% - 100px);
+    /* 100% ширины контейнера минус отступы по 50px с каждой стороны */
+    height: auto;
+    border-radius: 20px;
+    /* Закругленные углы */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    /* Мягкая внешняя тень */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Супертонкая белая рамка с прозрачностью */
+    margin: 20px 50px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* Равная ширина всех колонок */
+    gap: 20px;
+    /* Расстояние между столбцами */
+    justify-content: center;
+    /* Центрирование на странице */
+    max-width: 800px;
+    margin: 0 auto;
+    margin: 0px 50px 0px 50px;
+}
+
+.product-card h3 {
+    color: #fff;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.product-card {
+    backdrop-filter: blur(10px) brightness(0.9);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 20px rgba(12, 11, 11, 0.5);
+    /* Глубокая тень при наведении */
+    transform: translateY(-5px);
+    /* Легкий подъём при наведении */
+}
+
+.product-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-card ul li {
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    margin: 10px 0;
+    color: #cfcfcf;
+    font-weight: 400;
+}
+
+.freetrial_button,
+.freeconnections_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #480ffb;
+    /* Линия с фиолетовой рамкой */
+    border-radius: 15px;
+    text-decoration: none;
+    margin: 10px auto;
+    font-weight: 600;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+    /* Изначальный градиент */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.freetrial_button:hover,
+.freeconnections_button:hover {
+    box-shadow: 0 8px 20px rgba(12, 11, 12, 0.7);
+    /* Глубокая тень при наведении */
+    border: 2px solid #fff;
+}
+
+@media (max-width: 1435px) {
+    #products img {
+        border-radius: 15px;
+        /* Менее выраженные закругления на телефонах */
+        max-width: calc(100% - 60px);
+        /* 100% ширины контейнера минус отступы по 50px с каждой стороны */
+    }
+
+    #products h2 {
+        margin: 0px 30px 0px 30px;
+    }
+
+    #products .product-grid {
+        margin: 0px 30px 0px 30px;
+        max-width: 1435px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* Две колонки на мобильных устройствах */
+    }
+
+}
+
+@media (max-width: 500px) {
+    #products img {
+        max-width: 100%;
+        margin: 20px 0px 20px 0px;
+        border-radius: 10px;
+    }
+
+    #products h2 {
+        margin: 0px 15px 0px 15px;
+    }
+
+    #products .product-grid {
+        margin: 0px;
+        grid-template-columns: 1fr;
+        /* Одна колонка для очень узких экранов */
+    }
+
+    .product-card h3 {
+        font-size: 18px;
+    }
+
+    .product-card ul li {
+        font-size: 16px;
+        margin: 10px auto;
+    }
+
+    .product-card {
+        border-radius: 10px;
+    }
+
+    .freetrial_button,
+    .freeconnections_button {
+        font-size: 14px;
+        padding: 6px 10px;
+        border-radius: 9px;
+    }
+
+}
+
+/* Секция 4*/
+#faq {
+    margin-bottom: 120px;
+}
+
+#faq h2 {
+    margin: 0px 50px;
+    text-align: center;
+}
+
+#faq img {
+    display: block;
+    max-width: calc(100% - 100px);
+    /* 100% ширины контейнера минус отступы по 50px с каждой стороны */
+    border-radius: 20px;
+    /* Закругленные углы */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    /* Мягкая внешняя тень */
+    margin: 23px 50px 0px 50px;
+    /* Центрирование изображения */
+}
+
+#faq h3 {
+    text-align: left;
+    font-size: 24px;
+    color: #ffffff;
+    /* Белый цвет для заголовка */
+    font-family: "Inter" sans-serif;
+    margin: 0 auto;
+    padding: 0px 35px 0px 0px;
+}
+
+.faq-item {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(48, 43, 53, 0.4));
+    /* Лёгкий градиент */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Полупрозрачная рамка */
+    border-radius: 20px;
+    padding: 13px 20px;
+    margin: 0px 50px 20px 50px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    /* Мягкая тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: center;
+}
+
+.faq-item:hover {
+    box-shadow: 0 8px 20px rgba(12, 11, 12, 0.5);
+    /* Глубокая тень при наведении */
+}
+
+.faq-question {
+    color: #e0e0e0;
+    /* Более яркий серый */
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Тень для выделения */
+    cursor: pointer;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 0;
+    transition: padding-bottom 0.5s ease;
+    /* Плавный переход для отступа */
+    font-family: "Inter", sans-serif;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    /* Изначально прозрачная линия */
+    transition: padding-bottom 0.5s ease, border-bottom-color 0.5s ease;
+    /* Плавный переход для отступа и цвета линии */
+}
+
+.faq-question::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23ddd" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    transform: translateY(-50%) rotate(180deg);
+    /* Поворот стрелки вверх */
+}
+
+.faq-answer {
+    font-size: 18px;
+    color: #b3b3b3;
+    max-height: 0;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.faq-item.active .faq-question {
+    padding-bottom: 20px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* Появляется при раскрытии */
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 20px 0px 5px 0px;
+}
+
+@media (max-width: 1435px) {
+    #faq h2 {
+        margin: 0px 30px 20px 30px;
+    }
+
+    #faq img {
+        border-radius: 15px;
+        /* Менее выраженные закругления на телефонах */
+        max-width: calc(100% - 60px);
+        /* 100% ширины контейнера минус отступы по 50px с каждой стороны */
+    }
+
+    .faq-item {
+        border-radius: 15px;
+        margin: 0px 30px 20px 20px;
+    }
+
+    #faq .faq-answer {
+        text-align: left;
+        /* Уменьшаем размер шрифта */
+    }
+}
+
+@media (max-width: 500px) {
+    #faq h2 {
+        margin: 0px;
+    }
+
+    #faq h3 {
+        font-size: 18px;
+    }
+
+    #faq img {
+        max-width: 100%;
+        margin: 20px 0px 0px 0px;
+    }
+
+    #faq .faq-answer {
+        font-size: 16px;
+    }
+
+    .faq-item {
+        border-radius: 10px;
+        margin: 0px 0px 20px 0px;
+    }
+
+}
+
+@media (max-width: 1279px) {
+    #faq {
+        margin-bottom: 30px !important;
+    }
+}
+
+/* Футер*/
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+    text-align: left;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 0 0px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    /* Логотип сверху, текст снизу */
+    align-items: flex-start;
+    /* Выровнять по левому краю */
+    justify-content: flex-start;
+    flex: 1 1 auto;
+}
+
+.footer-logo img {
+    width: 40px;
+    margin-bottom: 10px;
+    /* Отступ снизу у логотипа */
+}
+
+.footer-logo h6 {
+    font-size: 14px;
+    font-family: "GT Walsheim Bold", sans-serif;
+    margin: 0;
+    /* Убираем отступы */
+    color: #b6b1b1;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+    justify-content: flex-end;
+    /* Колонки выровнены по правому краю */
+    flex: 1 1 auto;
+}
+
+.footer-column {
+    flex: 0 1 auto;
+    /* Колонки занимают только необходимое пространство */
+    min-width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.footer-column ul li a {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+    /* Легкая прозрачность в обычном состоянии */
+}
+
+.footer-column ul li a:hover {
+    color: #c0bebe;
+    /* Изменение цвета при наведении */
+    opacity: 1;
+    /* Уменьшаем прозрачность, делая ссылку четче */
+}
+
+.footer-column .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.invert-color {
+    filter: invert(0.7);
+}
+
+/* Мобильная версия */
+@media (max-width: 1490px) {
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        /* Включаем перенос строк для столбцов */
+        justify-content: space-between;
+        /* Равномерно распределяем столбцы */
+        gap: 30px;
+    }
+
+    .footer-column {
+        flex: 1 1 calc(40% - 20px);
+        /* Два столбца занимают 50% ширины */
+        padding-bottom: 0 auto;
+        margin-bottom: 0;
+    }
+
+    .footer-column h3 {
+        text-align: left;
+        /* Выровняем заголовки по левому краю */
+        margin: 0 auto;
+    }
+
+    .footer-column:nth-child(3) {
+        flex: 1 1 100%;
+        /* Третий столбец переносится на новую строку */
+    }
+
+    .footer-column ul li {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        /* Логотип слева */
+        flex: 1 1 auto;
+        margin-bottom: 30px;
+    }
+
+    .footer-logo img {
+        width: 35px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-column h3 {
+        font-size: 14px;
+        text-align: left;
+        /* Выровняем заголовки по левому краю */
+        margin: 0 auto;
+    }
+
+    .footer-column ul li a {
+        font-size: 12px;
+    }
+
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        /* Логотип слева */
+        flex: 1 1 auto;
+        margin-bottom: 30px;
+    }
+
+    .footer-logo img {
+        width: 30px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
+}
+
+
+.Hotspot {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Белый Х */
+.Hotspot::before,
+.Hotspot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #ffffff;
+    /* Белый цвет */
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+    transform-origin: center;
+}
+
+/* Вращение для Х */
+.Hotspot::before {
+    transform: translate(-50%, -50%) rotate(37deg);
+}
+
+.Hotspot::after {
+    transform: translate(-50%, -50%) rotate(-37deg);
+}
+
+/* Анимация дыхания */
+@keyframes breathe {
+
+    0%,
+    100% {
+        transform: scale(1) translate(-50%, -50%);
+        opacity: 1;
+        box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff;
+    }
+
+    50% {
+        transform: scale(1.2) translate(-50%, -50%);
+        opacity: 0.7;
+        box-shadow: 0 0 20px #ffffff, 0 0 40px #ffffff;
+    }
+}
+
+.HotspotAnnotation {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+.Hotspot:hover .HotspotAnnotation {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
