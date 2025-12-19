@@ -443,7 +443,12 @@ nav ul li a:hover::after {
 }
 
 #home {
-    margin: -583px auto 0;
+    margin: -650px auto 0;
+    /* Выравниваем верх изображения с H1 в fixed-banner */
+    min-height: 100vh;
+    /* Минимальная высота для отображения всего контента на стартовом экране */
+    padding-bottom: 100px;
+    /* Отступ снизу чтобы H3 не обрезался */
 }
 
 @media (max-width: 1279px) {
@@ -553,7 +558,8 @@ nav ul li a:hover::after {
     /* Линия с фиолетовой рамкой */
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
     /* Изначальный градиент */
-    margin: 0 auto;
+    margin: 17px auto 0;
+    /* Выравниваем по нижней части изображения */
     font-family: "Inter", sans-serif;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
@@ -643,7 +649,8 @@ section:not(:first-of-type) {
     line-height: 1.6;
     color: #fff;
     padding: 0px 50px 0px 50px;
-    margin-top: 50px;
+    margin-top: 30px;
+    /* Уменьшаем отступ для лучшего вида на стартовом экране */
     margin-bottom: 50px;
     font-weight: 400;
     font-family: "Inter", sans-serif;
