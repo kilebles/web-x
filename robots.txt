@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.tunnelx.space/sitemap.xml
+Sitemap: https://www.tunnlx.com/sitemap.xml
